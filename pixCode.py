@@ -85,7 +85,7 @@ def decodeImage(image):
 	return ''.join(message)
 
 while True:
-	print "[1. Encode] | [2. Decode] | [3. Encode (File)]"
+	print "[1. Encode] | [2. Decode] | [3. Encode (File)] | [4. Decode (File)]"
 	try:
 		eod = int(raw_input(">> "))
 		if eod == 1:
@@ -101,7 +101,7 @@ while True:
 			else:
 				print "Image name can't be empty!"
 		elif eod == 2:
-			image_path = str(raw_input("Supply the file: "))
+			image_path = str(raw_input("Supply the image file: "))
 			image_exists = os.path.isfile(image_path)
 			if image_exists:
 				image = Image.open(image_path, "r").convert('RGB')
@@ -128,8 +128,25 @@ while True:
 						print "Image name can't be empty!"
 				else:
 					print "File Not Found!"
+		elif eod == 4:
+			image_path = str(raw_input("Supply the image file: "))
+			if os.path.isfile(image_path):
+				newFile = str(raw_input("Save as: "))
+				if newFile != "":
+					if not os.path.isfile(newFile):
+						image = Image.open(image_path, "r").convert('RGB')
+						returnedData = decodeImage(image)
+						if returnedData != None:
+							with open(newFile, "w") as imageFile:
+								imageFile.write(returnedData)
+					else:
+						print "File already exists!"
+				else:
+					print "Filename can't be empty!"
+			else:
+				print "File Not Found!"
 		else:
-			print "Choose 1 or 2!"
+			print "Choose 1, 2, 3 or 4!"
 	except ValueError:
 		print "Use integers only!"
 	except KeyboardInterrupt:
