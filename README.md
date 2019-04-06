@@ -7,6 +7,7 @@ Convert messages to binary and encode them into an image.
 - With this option you can encode a simple message.
 - **Usage:**
     *1. type your message in the message field.*
+    
     *2. specify a filename.*
 
 --
@@ -22,6 +23,7 @@ Convert messages to binary and encode them into an image.
 - With this option you can encode a longer message.
 - **Usage:**
     *1. drag & drop the message file.*
+    
     *2. specify a filename*
 
 --
@@ -30,6 +32,7 @@ Convert messages to binary and encode them into an image.
 - With this option you can decode a message and save it to a file.
 - **Usage:**
     *1. drag & drop the encoded image file.*
+    
     *2. specify a filename*
 
 
