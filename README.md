@@ -11,7 +11,7 @@ Convert messages to binary and encode them into an image.
     
     *2. specify a filename.*
 
-
+---
 
 2. Decode
 - With this option you can decode a message.
@@ -19,7 +19,7 @@ Convert messages to binary and encode them into an image.
 
     *1. drag & drop the encoded image file.*
 
-
+---
 
 3. Encode (File)
 - With this option you can encode a longer message.
@@ -29,7 +29,7 @@ Convert messages to binary and encode them into an image.
     
     *2. specify a filename*
 
-
+---
 
 4. Decode (File)
 - With this option you can decode a message and save it to a file.
@@ -39,6 +39,6 @@ Convert messages to binary and encode them into an image.
     
     *2. specify a filename*
 
-
+---
 
 ##### note: 3 accepts only text files so far.
